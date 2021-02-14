@@ -1,6 +1,8 @@
 # CommandProcessor
 Command Processor - Mulesoft
 
+<img src="image/console.png" width="70%" height="70%">
+
 ## Comandos
 - cd [dirName|path]
 - mkdir [dirName]
@@ -20,4 +22,4 @@ Ejecutar el proyecto con el argumento `-loadstate`. Esto cargará el archivo `st
 - Maven 3.6.3
 
 ## Sobre
-Proyecto realizado por Leandro Matias Rivas
+Proyecto realizado por Leandro Matias Rivas.
