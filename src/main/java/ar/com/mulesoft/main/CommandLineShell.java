@@ -3,10 +3,10 @@ package ar.com.mulesoft.main;
 import ar.com.mulesoft.command.CommandException;
 import ar.com.mulesoft.command.impl.*;
 
-public class CommandLine {
+public class CommandLineShell {
     private State state;
 
-    public CommandLine() {
+    public CommandLineShell() {
         this.state = new State();
     }
 
@@ -45,10 +45,10 @@ public class CommandLine {
         this.state.save();
     }
 
-    public static CommandLine load() {
-        CommandLine commandLine = new CommandLine();
-        commandLine.state = State.load();
+    public static CommandLineShell load() {
+        CommandLineShell commandLineShell = new CommandLineShell();
+        commandLineShell.state = State.load();
 
-        return commandLine;
+        return commandLineShell;
     }
 }

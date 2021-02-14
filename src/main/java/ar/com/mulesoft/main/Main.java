@@ -14,16 +14,16 @@ public class Main {
 
     public static void main(String[] args) {
         boolean isRunning = true;
-        CommandLine commandLine = setFileSystem(args);
+        CommandLineShell commandLineShell = setCommandLineShell(args);
 
         while(isRunning) {
             Input input = readInput();
             if(input != null) {
                 if(QUIT_COMMAND.equals(input.command)) {
                     isRunning = false;
-                    commandLine.save();
+                    commandLineShell.save();
                 }
-                commandLine.execute(input.command, input.params);
+                commandLineShell.execute(input.command, input.params);
             }
         }
         return;
@@ -37,11 +37,11 @@ public class Main {
         return line.length == 0;
     }
 
-    private static CommandLine setFileSystem(String[] args) {
+    private static CommandLineShell setCommandLineShell(String[] args) {
         if(args.length == 1 && LOAD_STATE.equals(args[0])) {
-            return CommandLine.load();
+            return CommandLineShell.load();
         } else {
-            return new CommandLine();
+            return new CommandLineShell();
         }
     }
 
